@@ -24,12 +24,17 @@
                 'name': 'MyService.com',
                 'description': 'Order no. 123abc',
                 'cancelled': 'cc_callback'
+                noConflict: false,
+                persistentModal: true,
+                openOnLoad: true,
+                locale: "et",
+                email: "mk.test@maksekeskus.ee",
+				clientName: "",
+				backdropClose: false,
+				cancelButton: true
             }
         );
 
-        setTimeout(() => {
-            window.Maksekeskus.Checkout.open()
-        }, 500);
 
     </script>
 
