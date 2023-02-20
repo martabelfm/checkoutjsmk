@@ -10,11 +10,21 @@
     <link rel="apple-touch-icon" href="https://static.maksekeskus.ee/img/apple-touch-icon.png">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
+<style>
+    @media only screen and (max-width: 600px) {
+ .test {
+    background-color: lightblue;
+  }
 
+  .test {
+    background-color: black;
+  }
+}
+</style>
 <body>
     <script src="https://payment.test.maksekeskus.ee/checkout/dist/checkout.min.js?154-codepipeline/test_ir-gw"
         type="text/javascript"></script>
-
+ <button class="test">OK</button>
     <!-- Checkout form -->
     <script type="text/javascript">
         function checkout_completed(data) {
