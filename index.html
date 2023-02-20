@@ -1,26 +1,71 @@
 <!DOCTYPE html>
-<html >
+
+<html>
+
 <head>
-    <meta charset="utf-8">
-    <title>Veebikindlustus. Kindlustuskalkulaator. Autokindlustus. </title>
-	<script
-  src="https://code.jquery.com/jquery-3.6.3.min.js"
-  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-  crossorigin="anonymous"></script>
+    <title>Maksekeskus - Card payment</title>
+
+
+    <link rel="shortcut icon" href="https://static.maksekeskus.ee/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://static.maksekeskus.ee/img/apple-touch-icon.png">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <script src="https://payment.test.maksekeskus.ee/checkout/dist/checkout.min.js?154-codepipeline/test_ir-gw"
+        type="text/javascript"></script>
 
-    <script src="https://payment.test.maksekeskus.ee/checkout/dist/checkout.min.js?154-codepipeline/test_ir-gw" type="text/javascript"></script>
-    <script>
-        window.cc_callback = function (data) {
-            alert('The CC dialog returned: \r\n \r\n' + JSON.stringify(data));
+    <!-- Checkout form -->
+    <script type="text/javascript">
+        function checkout_completed(data) {
+            var form = document.createElement('form');
+            form.setAttribute('method', 'POST');
+            form.setAttribute('action', '/pay/return.html');
+            form.setAttribute('id', 'MaksekeskusPostForm');
+
+            document.querySelector('body').appendChild(form);
+
+            var postForm = document.querySelector('#MaksekeskusPostForm');
+
+            // insert trx id into the form
+            var input = document.createElement('input');
+            input.setAttribute('type', 'hidden');
+            input.setAttribute('name', 'trx');
+            input.value = 'c58dfc26-1e00-4bd6-838d-3150adf26ad1';
+            postForm.appendChild(input);
+
+            // insert token data into the form
+            for (var field in data) {
+                if (data.hasOwnProperty(field)) {
+                    var input = document.createElement('input');
+                    input.setAttribute('type', 'hidden');
+                    input.setAttribute('name', field);
+                    input.value = data[field];
+                    postForm.appendChild(input);
+                }
+            }
+
+            // create submit button (because calling direct .submit() on the form, doesn't trigger the event)
+            var submitButton = document.createElement('input');
+            submitButton.setAttribute('type', 'submit');
+            submitButton.setAttribute('id', 'maksekeskusBuy');
+            submitButton.setAttribute('style', 'display: none');
+
+            // submit form
+            postForm.appendChild(submitButton);
+            postForm.querySelector('#maksekeskusBuy').click();
         }
 
-        window.Maksekeskus.Checkout.initialize(
-            {
-			
-                cancelled: "cc_callback",
+        function checkout_cancelled(data) {
+            window.top.location.href = "/pay/cancel.html?trx=c58dfc26-1e00-4bd6-838d-3150adf26ad1";
+        }
+
+        $(function () {
+
+            Maksekeskus.Checkout.initialize({
+                completed: "checkout_completed",
+                cancelled: "checkout_cancelled",
                 persistentModal: true,
                 openOnLoad: true,
                 key: "g45CesJxnaZjBeRl38jY0qXihql3ETBLNxdSPNf2N5cfaUq4TzSJQFSYW3RrMj2q",
@@ -31,13 +76,12 @@
                 description: "123abc",
                 locale: "et",
                 email: "mk.test@maksekeskus.ee",
-				clientName: "",
-				backdropClose: false,
-				cancelButton: true
-            }
-        );
+                clientName: "",
+                backdropClose: false,
+                cancelButton: true
+            });
 
-
+        });
     </script>
 
 </body>
