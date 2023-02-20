@@ -31,7 +31,7 @@
             var input = document.createElement('input');
             input.setAttribute('type', 'hidden');
             input.setAttribute('name', 'trx');
-            input.value = '731c32bb-08e3-406f-a0f9-671fb1f95f2d';
+            input.value = '832699cd-cfe0-4b04-b793-838752f1516d';
             postForm.appendChild(input);
 
             // insert token data into the form
@@ -57,24 +57,23 @@
         }
 
         function checkout_cancelled(data) {
-            window.top.location.href = "/pay/cancel.html?trx=731c32bb-08e3-406f-a0f9-671fb1f95f2d";
+            window.top.location.href = "/pay/cancel.html?trx=832699cd-cfe0-4b04-b793-838752f1516d";
         }
 
         $(function () {
 
             Maksekeskus.Checkout.initialize({
    
-              completed: "checkout_completed",
                 cancelled: "checkout_cancelled",
                 noConflict: false,
                 persistentModal: true,
                 openOnLoad: true,
-                key: "PHu5u5j7fwLa19PngtEmGfnPutmqN7Oh",
+                key: "g45CesJxnaZjBeRl38jY0qXihql3ETBLNxdSPNf2N5cfaUq4TzSJQFSYW3RrMj2q",
                 name: "mk-test",
-                transaction: "731c32bb-08e3-406f-a0f9-671fb1f95f2d",
+                transaction: "832699cd-cfe0-4b04-b793-838752f1516d",
                 amount: "75.95",
                 currency: "EUR",
-                description: "2113111564728",
+                description: "Order no. 123abc",
                 locale: "et",
                 email: "",
 				clientName: "",
