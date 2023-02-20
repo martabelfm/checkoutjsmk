@@ -1,1 +1,38 @@
-Hello world
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veebikindlustus. Kindlustuskalkulaator. Autokindlustus. </title>
+</head>
+
+<body>
+
+    <script src="https://payment.test.maksekeskus.ee/checkout/dist/checkout.min.js"></script>
+    <script>
+        window.cc_callback = function (data) {
+            alert('The CC dialog returned: \r\n \r\n' + JSON.stringify(data));
+        }
+
+        window.Maksekeskus.Checkout.initialize(
+            {
+                'key': 'g45CesJxnaZjBeRl38jY0qXihql3ETBLNxdSPNf2N5cfaUq4TzSJQFSYW3RrMj2q',
+                'transaction': 'c58dfc26-1e00-4bd6-838d-3150adf26ad1',
+                'amount': '75.95',
+                'currency': 'EUR',
+                'locale': 'en',
+                'name': 'MyService.com',
+                'description': 'Order no. 123abc',
+                'cancelled': 'cc_callback'
+            }
+        );
+
+        setTimeout(() => {
+            window.Maksekeskus.Checkout.open()
+        }, 500);
+
+    </script>
+
+</body>
+
+</html>
