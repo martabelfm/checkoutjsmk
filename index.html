@@ -7,7 +7,6 @@
 
     <link rel="shortcut icon" href="https://static.maksekeskus.ee/img/favicon.ico" />
     <link rel="apple-touch-icon" href="https://static.maksekeskus.ee/img/apple-touch-icon.png">
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,56 +14,12 @@
     <script src="https://payment.test.maksekeskus.ee/checkout/dist/checkout.min.js?154-codepipeline/test_ir-gw"
         type="text/javascript"></script>
 
-    <!-- Checkout form -->
-    <script type="text/javascript">
-        function checkout_completed(data) {
-            var form = document.createElement('form');
-            form.setAttribute('method', 'POST');
-            form.setAttribute('action', '/pay/return.html');
-            form.setAttribute('id', 'MaksekeskusPostForm');
-
-            document.querySelector('body').appendChild(form);
-
-            var postForm = document.querySelector('#MaksekeskusPostForm');
-
-            // insert trx id into the form
-            var input = document.createElement('input');
-            input.setAttribute('type', 'hidden');
-            input.setAttribute('name', 'trx');
-            input.value = '832699cd-cfe0-4b04-b793-838752f1516d';
-            postForm.appendChild(input);
-
-            // insert token data into the form
-            for (var field in data) {
-                if (data.hasOwnProperty(field)) {
-                    var input = document.createElement('input');
-                    input.setAttribute('type', 'hidden');
-                    input.setAttribute('name', field);
-                    input.value = data[field];
-                    postForm.appendChild(input);
-                }
-            }
-
-            // create submit button (because calling direct .submit() on the form, doesn't trigger the event)
-            var submitButton = document.createElement('input');
-            submitButton.setAttribute('type', 'submit');
-            submitButton.setAttribute('id', 'maksekeskusBuy');
-            submitButton.setAttribute('style', 'display: none');
-
-            // submit form
-            postForm.appendChild(submitButton);
-            postForm.querySelector('#maksekeskusBuy').click();
-        }
-
-        function checkout_cancelled(data) {
-            window.top.location.href = "/pay/cancel.html?trx=832699cd-cfe0-4b04-b793-838752f1516d";
-        }
 
         $(function () {
 
             Maksekeskus.Checkout.initialize({
    
-                cancelled: "checkout_cancelled",
+   
                 noConflict: false,
                 persistentModal: true,
                 openOnLoad: true,
