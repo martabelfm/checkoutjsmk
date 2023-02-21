@@ -1,11 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<style>
-iframe {
-width: 100%!important;
-}
-</style>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -109,10 +104,6 @@ width: 100%!important;
             <li class="default">
                 <a href="messages.php">Notifications</a>
             </li>
-             <!--
-              <li class="default">
-                <a style="color:red" href="medoro/payment.php">Medoro API</a>
-              </li> -->
                       </ul>
 
       
@@ -120,7 +111,7 @@ width: 100%!important;
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
            <!-- / <span class="glyphicon glyphicon-refresh"></span>  -->
-            <b>Shop Context:</b> mk-test <span class="caret"></span></a>
+            <b>Shop Context:</b> mk-staging <span class="caret"></span></a>
         <ul class="dropdown-menu">
             <li><a href="context.php?action=reset"> Reset context</a></li>
             <li><a href="contextlist.php">View current context</a></li>   
@@ -302,11 +293,11 @@ $transaction = $MK->createTransaction($request_body);
     <tbody>
         <tr>
             <td class="col-md-2"><b>Request</b></td>
-            <td><span class="label label-info">POST</span> https://api.test.maksekeskus.ee/v1/transactions</td>
+            <td><span class="label label-info">POST</span> https://api.dev.maksekeskus.ee/v1/transactions</td>
         </tr>
                     <tr>
                 <td>Authentication</td>
-                <td><code>6385f130-8e5a-409a-a88b-ac0eefe1467e</code> : <code>qi3bClzMx8wfmAD9Of8tSFPNs8iOJGsA0fSC544pn4aD2WL5ygyJsI3oEQXYIBwk</code></td>
+                <td><code>21d96e14-0b4c-4ff2-a1be-459f0ae82517</code> : <code>C3wKxKko8m04E7Vln7Zh11OdhU663vzCOXRNzY4KBBhSooWAx8ZPjJPPkwoJZx37</code></td>
             </tr>
                 <tr>
             <td>Content type</td>
@@ -315,7 +306,7 @@ $transaction = $MK->createTransaction($request_body);
         <tr>
             <td>Headers</td>
             <td><pre><small>POST /v1/transactions HTTP/1.1
-Host: api.test.maksekeskus.ee
+Host: api.dev.maksekeskus.ee
 Expect:
 User-Agent: Httpful/0.2.20 (cURL/7.85.0 PHP/7.3.33-pl1-zoneos (Linux) Apache / ZoneOS Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36)
 Content-Type: application/json
@@ -333,7 +324,7 @@ Content-Length: 168
     },
     &quot;customer&quot;:{
         &quot;email&quot;:&quot;mk.test@maksekeskus.ee&quot;,
-        &quot;ip&quot;:&quot;90.190.81.184&quot;,
+        &quot;ip&quot;:&quot;80.235.22.114&quot;,
         &quot;country&quot;:&quot;ee&quot;,
         &quot;locale&quot;:&quot;et&quot;
     }
@@ -350,94 +341,94 @@ Content-Length: 168
         <tr>
             <td>Headers</td>
             <td><pre><small>HTTP/1.1 201 
-Date: Mon, 20 Feb 2023 14:24:37 GMT
+Date: Tue, 21 Feb 2023 09:56:03 GMT
 Content-Type: application/hal+json;charset=UTF-8
 Transfer-Encoding: chunked
 Connection: keep-alive
-Set-Cookie: AWSALB=IibbbyHoulD+kiPe+ovhDx026Nav1Zl2Db8PkYEwbkWWMdrNHwuYeymUG/0970HOPjgENvZ9AJFEfjO6HvSxDILzVKgWjUKTEW+QY1NAqcJrai5ZO3P7zlVgzuh/; Expires=Mon, 27 Feb 2023 14:24:37 GMT; Path=/
-Set-Cookie: AWSALBCORS=IibbbyHoulD+kiPe+ovhDx026Nav1Zl2Db8PkYEwbkWWMdrNHwuYeymUG/0970HOPjgENvZ9AJFEfjO6HvSxDILzVKgWjUKTEW+QY1NAqcJrai5ZO3P7zlVgzuh/; Expires=Mon, 27 Feb 2023 14:24:37 GMT; Path=/; SameSite=None; Secure
+Set-Cookie: AWSALB=wHkq3r3ZrJEBPbIYZ2oGHdWv482iHLQJ80Hl+9wd3CjkPv6wdpxVdz8h5a2BSlYw3eiJdlWYasx3xtlaJO+MQxRpIIw9XoNXFA6oBgoph59Yt6fCa23Hx3lmkfnk; Expires=Tue, 28 Feb 2023 09:56:02 GMT; Path=/
+Set-Cookie: AWSALBCORS=wHkq3r3ZrJEBPbIYZ2oGHdWv482iHLQJ80Hl+9wd3CjkPv6wdpxVdz8h5a2BSlYw3eiJdlWYasx3xtlaJO+MQxRpIIw9XoNXFA6oBgoph59Yt6fCa23Hx3lmkfnk; Expires=Tue, 28 Feb 2023 09:56:02 GMT; Path=/; SameSite=None; Secure
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: Authorization, Content-Type
-Set-Cookie: JSESSIONID=1949098767DEDF6F8078E05EDFACA66F; Path=/; Secure; HttpOnly
-X-Request-ID: 7a7a7cda-67c7-4d11-8bc4-41cdc0b54c3a
-Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a53-67e9727bba4b</small></pre></td>
+Set-Cookie: JSESSIONID=6EE88B40E9C3CA464E4EA9B2DEB4B02E; Path=/; Secure; HttpOnly
+X-Request-ID: 07153be1-32d9-4c4c-a133-bf4cad18bb47
+Location: https://api.dev.maksekeskus.ee/v1/transactions/39c10756-633d-4c24-9c4e-77bd6a0d55e9</small></pre></td>
         </tr>
         <tr>
             <td>
                 Body
                 <div class="btn-group" role="group" aria-label="...">
-                    <button id="btnResponseBodyJson_53246bb4a53cf2620f9685adafcfbf32" type="button" class="btn btn-default btn-xs active" onclick="toggleResponseBody('53246bb4a53cf2620f9685adafcfbf32');">JSON</button>
-                    <button id="btnResponseBodyPhp_53246bb4a53cf2620f9685adafcfbf32" type="button" class="btn btn-default btn-xs" onclick="toggleResponseBody('53246bb4a53cf2620f9685adafcfbf32');">PHP</button>
+                    <button id="btnResponseBodyJson_8f07e8eb731315495b182f9034e25e3d" type="button" class="btn btn-default btn-xs active" onclick="toggleResponseBody('8f07e8eb731315495b182f9034e25e3d');">JSON</button>
+                    <button id="btnResponseBodyPhp_8f07e8eb731315495b182f9034e25e3d" type="button" class="btn btn-default btn-xs" onclick="toggleResponseBody('8f07e8eb731315495b182f9034e25e3d');">PHP</button>
                 </div>
             </td>
             <td>
-                <div id="responseBodyJson_53246bb4a53cf2620f9685adafcfbf32" class="collapse in">
+                <div id="responseBodyJson_8f07e8eb731315495b182f9034e25e3d" class="collapse in">
                     <pre><small>{
     &quot;_links&quot;:{
         &quot;Pay&quot;:{
-            &quot;href&quot;:&quot;https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a53-67e9727bba4b/payments&quot;
+            &quot;href&quot;:&quot;https://api.dev.maksekeskus.ee/v1/transactions/39c10756-633d-4c24-9c4e-77bd6a0d55e9/payments&quot;
         },
         &quot;self&quot;:{
-            &quot;href&quot;:&quot;https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+            &quot;href&quot;:&quot;https://api.dev.maksekeskus.ee/v1/transactions/39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
         }
     },
     &quot;amount&quot;:75.95,
     &quot;channel&quot;:null,
     &quot;country&quot;:&quot;ee&quot;,
-    &quot;created_at&quot;:&quot;2023-02-20T14:24:37+0000&quot;,
+    &quot;created_at&quot;:&quot;2023-02-21T09:56:02+0000&quot;,
     &quot;currency&quot;:&quot;EUR&quot;,
     &quot;customer&quot;:{
         &quot;country&quot;:&quot;ee&quot;,
-        &quot;created_at&quot;:&quot;2023-02-20T14:24:37+0000&quot;,
+        &quot;created_at&quot;:&quot;2023-02-21T09:56:02+0000&quot;,
         &quot;email&quot;:&quot;mk.test@maksekeskus.ee&quot;,
-        &quot;id&quot;:&quot;4010e25d-99b4-40a6-8590-d87bf064e761&quot;,
-        &quot;ip&quot;:&quot;90.190.81.184&quot;,
+        &quot;id&quot;:&quot;2d11125b-3642-4378-88e2-0e1f23cac5a9&quot;,
+        &quot;ip&quot;:&quot;80.235.22.114&quot;,
         &quot;ip_country&quot;:&quot;ee&quot;,
         &quot;locale&quot;:&quot;et&quot;,
-        &quot;name&quot;:&quot;4010e25d-99b4-40a6-8590-d87bf064e761&quot;,
+        &quot;name&quot;:&quot;2d11125b-3642-4378-88e2-0e1f23cac5a9&quot;,
         &quot;object&quot;:&quot;customer&quot;
     },
-    &quot;id&quot;:&quot;2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;,
+    &quot;id&quot;:&quot;39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;,
     &quot;method&quot;:null,
     &quot;object&quot;:&quot;transaction&quot;,
     &quot;payment_methods&quot;:{
         &quot;banklinks&quot;:[
             {
-                &quot;channel&quot;:&quot;Swedbank EE&quot;,
+                &quot;channel&quot;:&quot;Swedbank EE OB&quot;,
                 &quot;countries&quot;:[
                     &quot;ee&quot;
                 ],
                 &quot;country&quot;:&quot;ee&quot;,
                 &quot;display_name&quot;:&quot;Swedbank&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/swedbank.png&quot;,
-                &quot;max_amount&quot;:100000.0,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/swedbank.png&quot;,
+                &quot;max_amount&quot;:15000.0,
                 &quot;name&quot;:&quot;swedbank&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/banklink.html?method=EE_SWED&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/open-banking.html?method=EE_SWED_OB&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             },
             {
-                &quot;channel&quot;:&quot;SEB EE&quot;,
+                &quot;channel&quot;:&quot;SEB EE OB&quot;,
                 &quot;countries&quot;:[
                     &quot;ee&quot;
                 ],
                 &quot;country&quot;:&quot;ee&quot;,
                 &quot;display_name&quot;:&quot;SEB&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/seb.png&quot;,
-                &quot;max_amount&quot;:100000.0,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/seb.png&quot;,
+                &quot;max_amount&quot;:15000.0,
                 &quot;name&quot;:&quot;seb&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/banklink.html?method=EE_SEB&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/open-banking.html?method=EE_SEB_OB&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             },
             {
-                &quot;channel&quot;:&quot;LHV EE&quot;,
+                &quot;channel&quot;:&quot;LHV EE OB&quot;,
                 &quot;countries&quot;:[
                     &quot;ee&quot;
                 ],
                 &quot;country&quot;:&quot;ee&quot;,
                 &quot;display_name&quot;:&quot;LHV&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/lhv.png&quot;,
-                &quot;max_amount&quot;:100000.0,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/lhv.png&quot;,
+                &quot;max_amount&quot;:15000.0,
                 &quot;name&quot;:&quot;lhv&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/banklink.html?method=EE_LHV&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/open-banking.html?method=EE_LHV_OB&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             },
             {
                 &quot;channel&quot;:&quot;Luminor EE&quot;,
@@ -446,22 +437,22 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
                 ],
                 &quot;country&quot;:&quot;ee&quot;,
                 &quot;display_name&quot;:&quot;Luminor&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/luminor.png&quot;,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/luminor.png&quot;,
                 &quot;max_amount&quot;:100000.0,
                 &quot;name&quot;:&quot;nordea&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/banklink.html?method=EE_NORDEA&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/banklink.html?method=EE_NORDEA&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             },
             {
-                &quot;channel&quot;:&quot;Coop Pank EE&quot;,
+                &quot;channel&quot;:&quot;Coop Pank EE OB&quot;,
                 &quot;countries&quot;:[
                     &quot;ee&quot;
                 ],
                 &quot;country&quot;:&quot;ee&quot;,
                 &quot;display_name&quot;:&quot;Coop Pank&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/coop.png&quot;,
-                &quot;max_amount&quot;:100000.0,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/coop.png&quot;,
+                &quot;max_amount&quot;:15000.0,
                 &quot;name&quot;:&quot;krediidipank&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/banklink.html?method=EE_KREDIIDI&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/open-banking.html?method=EE_COOP_OB&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             },
             {
                 &quot;channel&quot;:&quot;Pocopay EE&quot;,
@@ -471,10 +462,10 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
                 ],
                 &quot;country&quot;:&quot;ee&quot;,
                 &quot;display_name&quot;:&quot;Pocopay&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/pocopay.png&quot;,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/pocopay.png&quot;,
                 &quot;max_amount&quot;:100000.0,
                 &quot;name&quot;:&quot;pocopay&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/banklink.html?method=EE_POCOPAY&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/banklink.html?method=EE_POCOPAY&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             },
             {
                 &quot;channel&quot;:&quot;Revolut PIS&quot;,
@@ -483,32 +474,32 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
                 ],
                 &quot;country&quot;:&quot;ee&quot;,
                 &quot;display_name&quot;:&quot;Revolut&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/revolut.png&quot;,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/revolut.png&quot;,
                 &quot;max_amount&quot;:15000.0,
                 &quot;name&quot;:&quot;revolut&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/open-banking.html?method=REVOLUT_PIS&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/open-banking.html?method=REVOLUT_PIS&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             }
         ],
         &quot;cards&quot;:[
             {
                 &quot;channel&quot;:&quot;Visa&quot;,
                 &quot;display_name&quot;:&quot;Visa&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/visa.png&quot;,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/visa.png&quot;,
                 &quot;name&quot;:&quot;visa&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/card.html?trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/card.html?trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             },
             {
                 &quot;channel&quot;:&quot;MasterCard&quot;,
                 &quot;display_name&quot;:&quot;MasterCard&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/mastercard.png&quot;,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/mastercard.png&quot;,
                 &quot;name&quot;:&quot;mastercard&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/card.html?trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/card.html?trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             }
         ],
         &quot;other&quot;:[
             {
                 &quot;name&quot;:&quot;redirect&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/pay.html?trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/pay.html?trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             },
             {
                 &quot;channel&quot;:&quot;mTasku&quot;,
@@ -518,30 +509,30 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
                 ],
                 &quot;country&quot;:&quot;ee&quot;,
                 &quot;display_name&quot;:&quot;mTasku&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/mtasku.png&quot;,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/mtasku.png&quot;,
                 &quot;max_amount&quot;:100000.0,
                 &quot;name&quot;:&quot;mtasku&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/mobile.html?method=MTASKU&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/mobile.html?method=MTASKU&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             },
             {
                 &quot;channel&quot;:&quot;Gift card EE&quot;,
                 &quot;countries&quot;:[],
                 &quot;country&quot;:&quot;ee&quot;,
                 &quot;display_name&quot;:&quot;Kniks&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/gift_card.png&quot;,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/gift_card.png&quot;,
                 &quot;max_amount&quot;:100000.0,
                 &quot;name&quot;:&quot;gift_card&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/other.html?method=EE_GIFT_CARD&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/other.html?method=EE_GIFT_CARD&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             },
             {
                 &quot;channel&quot;:&quot;Gift card EE&quot;,
                 &quot;countries&quot;:[],
                 &quot;country&quot;:&quot;fi&quot;,
                 &quot;display_name&quot;:&quot;Kniks&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/gift_card.png&quot;,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/gift_card.png&quot;,
                 &quot;max_amount&quot;:100000.0,
                 &quot;name&quot;:&quot;gift_card&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/other.html?method=EE_GIFT_CARD&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/other.html?method=EE_GIFT_CARD&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             }
         ],
         &quot;payLater&quot;:[
@@ -552,11 +543,11 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
                 ],
                 &quot;country&quot;:&quot;ee&quot;,
                 &quot;display_name&quot;:&quot;Indivy 3&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/slice.png&quot;,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/slice.png&quot;,
                 &quot;max_amount&quot;:1500.0,
                 &quot;min_amount&quot;:75.0,
                 &quot;name&quot;:&quot;slice&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/pay-later.html?method=EE_SLICE&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/pay-later.html?method=EE_SLICE&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             },
             {
                 &quot;channel&quot;:&quot;Indivy EE&quot;,
@@ -565,11 +556,11 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
                 ],
                 &quot;country&quot;:&quot;ee&quot;,
                 &quot;display_name&quot;:&quot;Indivy&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/indivy-go.png&quot;,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/indivy-go.png&quot;,
                 &quot;max_amount&quot;:800.0,
                 &quot;min_amount&quot;:30.0,
                 &quot;name&quot;:&quot;indivy-go&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/pay-later.html?method=EE_INDIVY_GO&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/pay-later.html?method=EE_INDIVY_GO&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             },
             {
                 &quot;channel&quot;:&quot;Liisi ID EE&quot;,
@@ -578,11 +569,11 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
                 ],
                 &quot;country&quot;:&quot;ee&quot;,
                 &quot;display_name&quot;:&quot;Liisi ID&quot;,
-                &quot;logo_url&quot;:&quot;https://static.test.maksekeskus.ee/img/channel/lnd/liisi_ee.png&quot;,
+                &quot;logo_url&quot;:&quot;https://static.dev.maksekeskus.ee/img/channel/lnd/liisi_ee.png&quot;,
                 &quot;max_amount&quot;:100000.0,
                 &quot;min_amount&quot;:30.0,
                 &quot;name&quot;:&quot;liisi_ee&quot;,
-                &quot;url&quot;:&quot;https://payment.test.maksekeskus.ee/pay-later.html?method=EE_LIISI_EE&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b&quot;
+                &quot;url&quot;:&quot;https://payment.dev.maksekeskus.ee/pay-later.html?method=EE_LIISI_EE&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9&quot;
             }
         ]
     },
@@ -592,19 +583,19 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
     &quot;type&quot;:null
 }</small></pre>
                 </div>
-                <div id="responseBodyPhp_53246bb4a53cf2620f9685adafcfbf32" class="collapse">
+                <div id="responseBodyPhp_8f07e8eb731315495b182f9034e25e3d" class="collapse">
                     <pre><small>stdClass Object
 (
     [_links] =&gt; stdClass Object
         (
             [Pay] =&gt; stdClass Object
                 (
-                    [href] =&gt; https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a53-67e9727bba4b/payments
+                    [href] =&gt; https://api.dev.maksekeskus.ee/v1/transactions/39c10756-633d-4c24-9c4e-77bd6a0d55e9/payments
                 )
 
             [self] =&gt; stdClass Object
                 (
-                    [href] =&gt; https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                    [href] =&gt; https://api.dev.maksekeskus.ee/v1/transactions/39c10756-633d-4c24-9c4e-77bd6a0d55e9
                 )
 
         )
@@ -612,22 +603,22 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
     [amount] =&gt; 75.95
     [channel] =&gt; 
     [country] =&gt; ee
-    [created_at] =&gt; 2023-02-20T14:24:37+0000
+    [created_at] =&gt; 2023-02-21T09:56:02+0000
     [currency] =&gt; EUR
     [customer] =&gt; stdClass Object
         (
             [country] =&gt; ee
-            [created_at] =&gt; 2023-02-20T14:24:37+0000
+            [created_at] =&gt; 2023-02-21T09:56:02+0000
             [email] =&gt; mk.test@maksekeskus.ee
-            [id] =&gt; 4010e25d-99b4-40a6-8590-d87bf064e761
-            [ip] =&gt; 90.190.81.184
+            [id] =&gt; 2d11125b-3642-4378-88e2-0e1f23cac5a9
+            [ip] =&gt; 80.235.22.114
             [ip_country] =&gt; ee
             [locale] =&gt; et
-            [name] =&gt; 4010e25d-99b4-40a6-8590-d87bf064e761
+            [name] =&gt; 2d11125b-3642-4378-88e2-0e1f23cac5a9
             [object] =&gt; customer
         )
 
-    [id] =&gt; 2e737dd6-cf53-42ef-9a53-67e9727bba4b
+    [id] =&gt; 39c10756-633d-4c24-9c4e-77bd6a0d55e9
     [method] =&gt; 
     [object] =&gt; transaction
     [payment_methods] =&gt; stdClass Object
@@ -636,7 +627,7 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
                 (
                     [0] =&gt; stdClass Object
                         (
-                            [channel] =&gt; Swedbank EE
+                            [channel] =&gt; Swedbank EE OB
                             [countries] =&gt; Array
                                 (
                                     [0] =&gt; ee
@@ -644,15 +635,15 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                             [country] =&gt; ee
                             [display_name] =&gt; Swedbank
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/swedbank.png
-                            [max_amount] =&gt; 100000
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/swedbank.png
+                            [max_amount] =&gt; 15000
                             [name] =&gt; swedbank
-                            [url] =&gt; https://payment.test.maksekeskus.ee/banklink.html?method=EE_SWED&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/open-banking.html?method=EE_SWED_OB&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                     [1] =&gt; stdClass Object
                         (
-                            [channel] =&gt; SEB EE
+                            [channel] =&gt; SEB EE OB
                             [countries] =&gt; Array
                                 (
                                     [0] =&gt; ee
@@ -660,15 +651,15 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                             [country] =&gt; ee
                             [display_name] =&gt; SEB
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/seb.png
-                            [max_amount] =&gt; 100000
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/seb.png
+                            [max_amount] =&gt; 15000
                             [name] =&gt; seb
-                            [url] =&gt; https://payment.test.maksekeskus.ee/banklink.html?method=EE_SEB&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/open-banking.html?method=EE_SEB_OB&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                     [2] =&gt; stdClass Object
                         (
-                            [channel] =&gt; LHV EE
+                            [channel] =&gt; LHV EE OB
                             [countries] =&gt; Array
                                 (
                                     [0] =&gt; ee
@@ -676,10 +667,10 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                             [country] =&gt; ee
                             [display_name] =&gt; LHV
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/lhv.png
-                            [max_amount] =&gt; 100000
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/lhv.png
+                            [max_amount] =&gt; 15000
                             [name] =&gt; lhv
-                            [url] =&gt; https://payment.test.maksekeskus.ee/banklink.html?method=EE_LHV&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/open-banking.html?method=EE_LHV_OB&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                     [3] =&gt; stdClass Object
@@ -692,15 +683,15 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                             [country] =&gt; ee
                             [display_name] =&gt; Luminor
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/luminor.png
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/luminor.png
                             [max_amount] =&gt; 100000
                             [name] =&gt; nordea
-                            [url] =&gt; https://payment.test.maksekeskus.ee/banklink.html?method=EE_NORDEA&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/banklink.html?method=EE_NORDEA&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                     [4] =&gt; stdClass Object
                         (
-                            [channel] =&gt; Coop Pank EE
+                            [channel] =&gt; Coop Pank EE OB
                             [countries] =&gt; Array
                                 (
                                     [0] =&gt; ee
@@ -708,10 +699,10 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                             [country] =&gt; ee
                             [display_name] =&gt; Coop Pank
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/coop.png
-                            [max_amount] =&gt; 100000
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/coop.png
+                            [max_amount] =&gt; 15000
                             [name] =&gt; krediidipank
-                            [url] =&gt; https://payment.test.maksekeskus.ee/banklink.html?method=EE_KREDIIDI&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/open-banking.html?method=EE_COOP_OB&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                     [5] =&gt; stdClass Object
@@ -725,10 +716,10 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                             [country] =&gt; ee
                             [display_name] =&gt; Pocopay
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/pocopay.png
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/pocopay.png
                             [max_amount] =&gt; 100000
                             [name] =&gt; pocopay
-                            [url] =&gt; https://payment.test.maksekeskus.ee/banklink.html?method=EE_POCOPAY&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/banklink.html?method=EE_POCOPAY&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                     [6] =&gt; stdClass Object
@@ -741,10 +732,10 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                             [country] =&gt; ee
                             [display_name] =&gt; Revolut
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/revolut.png
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/revolut.png
                             [max_amount] =&gt; 15000
                             [name] =&gt; revolut
-                            [url] =&gt; https://payment.test.maksekeskus.ee/open-banking.html?method=REVOLUT_PIS&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/open-banking.html?method=REVOLUT_PIS&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                 )
@@ -755,18 +746,18 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
                         (
                             [channel] =&gt; Visa
                             [display_name] =&gt; Visa
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/visa.png
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/visa.png
                             [name] =&gt; visa
-                            [url] =&gt; https://payment.test.maksekeskus.ee/card.html?trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/card.html?trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                     [1] =&gt; stdClass Object
                         (
                             [channel] =&gt; MasterCard
                             [display_name] =&gt; MasterCard
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/mastercard.png
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/mastercard.png
                             [name] =&gt; mastercard
-                            [url] =&gt; https://payment.test.maksekeskus.ee/card.html?trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/card.html?trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                 )
@@ -776,7 +767,7 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
                     [0] =&gt; stdClass Object
                         (
                             [name] =&gt; redirect
-                            [url] =&gt; https://payment.test.maksekeskus.ee/pay.html?trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/pay.html?trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                     [1] =&gt; stdClass Object
@@ -790,10 +781,10 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                             [country] =&gt; ee
                             [display_name] =&gt; mTasku
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/mtasku.png
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/mtasku.png
                             [max_amount] =&gt; 100000
                             [name] =&gt; mtasku
-                            [url] =&gt; https://payment.test.maksekeskus.ee/mobile.html?method=MTASKU&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/mobile.html?method=MTASKU&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                     [2] =&gt; stdClass Object
@@ -805,10 +796,10 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                             [country] =&gt; ee
                             [display_name] =&gt; Kniks
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/gift_card.png
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/gift_card.png
                             [max_amount] =&gt; 100000
                             [name] =&gt; gift_card
-                            [url] =&gt; https://payment.test.maksekeskus.ee/other.html?method=EE_GIFT_CARD&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/other.html?method=EE_GIFT_CARD&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                     [3] =&gt; stdClass Object
@@ -820,10 +811,10 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                             [country] =&gt; fi
                             [display_name] =&gt; Kniks
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/gift_card.png
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/gift_card.png
                             [max_amount] =&gt; 100000
                             [name] =&gt; gift_card
-                            [url] =&gt; https://payment.test.maksekeskus.ee/other.html?method=EE_GIFT_CARD&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/other.html?method=EE_GIFT_CARD&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                 )
@@ -840,11 +831,11 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                             [country] =&gt; ee
                             [display_name] =&gt; Indivy 3
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/slice.png
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/slice.png
                             [max_amount] =&gt; 1500
                             [min_amount] =&gt; 75
                             [name] =&gt; slice
-                            [url] =&gt; https://payment.test.maksekeskus.ee/pay-later.html?method=EE_SLICE&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/pay-later.html?method=EE_SLICE&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                     [1] =&gt; stdClass Object
@@ -857,11 +848,11 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                             [country] =&gt; ee
                             [display_name] =&gt; Indivy
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/indivy-go.png
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/indivy-go.png
                             [max_amount] =&gt; 800
                             [min_amount] =&gt; 30
                             [name] =&gt; indivy-go
-                            [url] =&gt; https://payment.test.maksekeskus.ee/pay-later.html?method=EE_INDIVY_GO&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/pay-later.html?method=EE_INDIVY_GO&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                     [2] =&gt; stdClass Object
@@ -874,11 +865,11 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                             [country] =&gt; ee
                             [display_name] =&gt; Liisi ID
-                            [logo_url] =&gt; https://static.test.maksekeskus.ee/img/channel/lnd/liisi_ee.png
+                            [logo_url] =&gt; https://static.dev.maksekeskus.ee/img/channel/lnd/liisi_ee.png
                             [max_amount] =&gt; 100000
                             [min_amount] =&gt; 30
                             [name] =&gt; liisi_ee
-                            [url] =&gt; https://payment.test.maksekeskus.ee/pay-later.html?method=EE_LIISI_EE&amp;trx=2e737dd6-cf53-42ef-9a53-67e9727bba4b
+                            [url] =&gt; https://payment.dev.maksekeskus.ee/pay-later.html?method=EE_LIISI_EE&amp;trx=39c10756-633d-4c24-9c4e-77bd6a0d55e9
                         )
 
                 )
@@ -900,7 +891,7 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
       </div>
     </div>
 </div>
-<p>&nbsp;&nbsp;&nbsp; So we have now a Transaction, ID: <code>2e737dd6-cf53-42ef-9a53-67e9727bba4b</code></p>
+<p>&nbsp;&nbsp;&nbsp; So we have now a Transaction, ID: <code>39c10756-633d-4c24-9c4e-77bd6a0d55e9</code></p>
 <br>
 
 <div class="panel panel-default">
@@ -982,7 +973,7 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
                     We have placed such form to this page:<br>
 
                     <form id="checkoutForm" action="return.php" method="POST">
-                        <input type="hidden" name="transaction" id="transaction" value="2e737dd6-cf53-42ef-9a53-67e9727bba4b" />
+                        <input type="hidden" name="transaction" id="transaction" value="39c10756-633d-4c24-9c4e-77bd6a0d55e9" />
                         
                         <div class="row">
                             <div class="col-md-8">
@@ -990,12 +981,12 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
             <pre> &lt;form id="checkoutForm" action="return.php" method="POST"&gt;
     &lt;input type="hidden" name="transaction" id="transaction" value="&lt;?php echo $transaction-&gt;id; ?&gt;" /&gt;
 
-    &lt;script src="https://payment.test.maksekeskus.ee/checkout/dist/checkout.min.js"
-        data-key="g45CesJxnaZjBeRl38jY0qXihql3ETBLNxdSPNf2N5cfaUq4TzSJQFSYW3RrMj2q"
-        data-transaction="2e737dd6-cf53-42ef-9a53-67e9727bba4b"
+    &lt;script src="https://payment.dev.maksekeskus.ee/checkout/dist/checkout.min.js"
+        data-key="6yobKOXbdtQRnZ24QUXmhXouU9VvG8br"
+        data-transaction="39c10756-633d-4c24-9c4e-77bd6a0d55e9"
         data-amount="75.95"
         data-email="mk.test@maksekeskus.ee"
-        data-client-name="Mike Test"
+        data-client-name="Makse Testija"
         data-locale="et"
         data-name="Merchant Name"
         data-description="Order no. 123abc"
@@ -1010,12 +1001,12 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                         </div>
                         
-                        <script src="https://payment.test.maksekeskus.ee/checkout/dist/checkout.js"
-                            data-key="g45CesJxnaZjBeRl38jY0qXihql3ETBLNxdSPNf2N5cfaUq4TzSJQFSYW3RrMj2q"
-                            data-transaction="2e737dd6-cf53-42ef-9a53-67e9727bba4b"
+                        <script src="https://payment.dev.maksekeskus.ee/checkout/dist/checkout.js"
+                            data-key="6yobKOXbdtQRnZ24QUXmhXouU9VvG8br"
+                            data-transaction="39c10756-633d-4c24-9c4e-77bd6a0d55e9"
                             data-amount="75.95"
                             data-email="mk.test@maksekeskus.ee"
-                            data-client-name="Mike Test"
+                            data-client-name="Makse Testija"
                             data-locale="et"
                             data-name="Merchant Name"
                             data-description="Order no. 123abc"
@@ -1079,7 +1070,7 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
 
                                 </div>                               
 
-                                <script src="https://payment.test.maksekeskus.ee/checkout/dist/checkout.js"></script>
+                                <script src="https://payment.dev.maksekeskus.ee/checkout/dist/checkout.js"></script>
                                 <script>
                                     window.cc_callback = function(data)
                                     {   
@@ -1093,8 +1084,8 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
                                     }
 
                                     window.Maksekeskus.Checkout.initialize(
-                                    {   'key' : 'g45CesJxnaZjBeRl38jY0qXihql3ETBLNxdSPNf2N5cfaUq4TzSJQFSYW3RrMj2q', 
-                                        'transaction' : '2e737dd6-cf53-42ef-9a53-67e9727bba4b',
+                                    {   'key' : '6yobKOXbdtQRnZ24QUXmhXouU9VvG8br', 
+                                        'transaction' : '39c10756-633d-4c24-9c4e-77bd6a0d55e9',
                                         'amount' : '75.95', 
                                         'currency' : 'EUR', 
                                         'email' : 'john@diehard.ly', 
@@ -1145,7 +1136,7 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
                                 <td><code>data-key</code></td>
                                 <td><code>key</code></td>
                                 <td>Yes</td>
-                                <td>Shop's Public API Key (available in your <a href="https://merchant.test.maksekeskus.ee">Merchant Portal</a>)</td>
+                                <td>Shop's Public API Key (available in your <a href="https://merchant.dev.maksekeskus.ee">Merchant Portal</a>)</td>
                             </tr>
                             <tr>
                                 <td><code>data-transaction</code></td>
@@ -1333,12 +1324,12 @@ Location: https://api.test.maksekeskus.ee/v1/transactions/2e737dd6-cf53-42ef-9a5
         <hr />
 
                                                                             <h4>Transaction-related</h4>
-                                                    <a class="btn btn-info" href="transaction.get.php?transaction=2e737dd6-cf53-42ef-9a53-67e9727bba4b">Get transaction details</a>
-                                    <a class="btn btn-info" href="methods.php?transaction=2e737dd6-cf53-42ef-9a53-67e9727bba4b">Get payment methods</a>
-                                    <a class="btn btn-info" href="token.php?transaction=2e737dd6-cf53-42ef-9a53-67e9727bba4b">Create payment token</a>
-                                    <a class="btn btn-info" href="payment.php?transaction=2e737dd6-cf53-42ef-9a53-67e9727bba4b">Create payment</a>
-                                    <a class="btn btn-info" href="refund.php?transaction=2e737dd6-cf53-42ef-9a53-67e9727bba4b">Refund transaction</a>
-                                    <a class="btn btn-info" href="recurring.php?transaction=2e737dd6-cf53-42ef-9a53-67e9727bba4b">Recurring</a>
+                                                    <a class="btn btn-info" href="transaction.get.php?transaction=39c10756-633d-4c24-9c4e-77bd6a0d55e9">Get transaction details</a>
+                                    <a class="btn btn-info" href="methods.php?transaction=39c10756-633d-4c24-9c4e-77bd6a0d55e9">Get payment methods</a>
+                                    <a class="btn btn-info" href="token.php?transaction=39c10756-633d-4c24-9c4e-77bd6a0d55e9">Create payment token</a>
+                                    <a class="btn btn-info" href="payment.php?transaction=39c10756-633d-4c24-9c4e-77bd6a0d55e9">Create payment</a>
+                                    <a class="btn btn-info" href="refund.php?transaction=39c10756-633d-4c24-9c4e-77bd6a0d55e9">Refund transaction</a>
+                                    <a class="btn btn-info" href="recurring.php?transaction=39c10756-633d-4c24-9c4e-77bd6a0d55e9">Recurring</a>
                                                         
 
     
